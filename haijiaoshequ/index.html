@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海角社区今日回家方式-回家路线_通勤时段_换乘选择</title>
+<meta name="description" content="海角社区今日回家方式汇总今日各时段回家路线、通勤换乘与出行方式选择，说明步行、公交、拼车与骑行在晚高峰的取舍，适合每天往返海角社区的通勤者与住户查看。">
+<meta name="keywords" content="回家路线,晚高峰换乘,通勤时段,社区出行,拼车选择">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e3b45'/%3E%3Cpath d='M14 40 L32 18 L50 40' fill='none' stroke='%23f4b860' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='45' r='5' fill='%23f4b860'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#12262b;
+  --ink-2:#3d5a61;
+  --ink-3:#6b858c;
+  --paper:#f6f3ec;
+  --panel:#ffffff;
+  --line:#dfd9cc;
+  --brand:#0e3b45;
+  --brand-2:#14626e;
+  --accent:#d97a2b;
+  --accent-soft:#fbe9d6;
+  --gold:#f4b860;
+  --ok:#2f7d5d;
+  --shadow:0 2px 10px rgba(18,38,43,.07);
+  --shadow-lift:0 8px 26px rgba(18,38,43,.12);
+  --r-s:6px;
+  --r-m:12px;
+  --r-l:18px;
+  --stick:96px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--stick);}
+body{
+  margin:0;
+  font-family:var(--font);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:15.5px;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;letter-spacing:.2px;}
+p{margin:0 0 .85em;}
+ul,ol{margin:0 0 .9em;padding-left:1.25em;}
+li{margin-bottom:.35em;}
+a{color:var(--brand-2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+img,svg{max-width:100%;}
+
+/* ============ 公告条 ============ */
+.notice-bar{
+  background:var(--brand);
+  color:#e9f3f4;
+  font-size:13px;
+  height:34px;
+  display:flex;align-items:center;
+  position:sticky;top:0;z-index:60;
+}
+.notice-inner{
+  max-width:1380px;margin:0 auto;width:100%;padding:0 18px;
+  display:flex;align-items:center;gap:10px;
+  overflow:hidden;white-space:nowrap;
+}
+.notice-tag{
+  background:var(--gold);color:#3a2405;font-weight:700;
+  padding:1px 8px;border-radius:20px;font-size:12px;flex:none;
+}
+.notice-inner span.n{overflow:hidden;text-overflow:ellipsis;}
+
+/* ============ 页头 ============ */
+.site-head{
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--line);
+  position:sticky;top:34px;z-index:55;
+  backdrop-filter:blur(6px);
+}
+.head-inner{
+  max-width:1380px;margin:0 auto;padding:10px 18px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none;}
+.brand-mark{width:38px;height:38px;flex:none;}
+.brand-text{font-size:19px;font-weight:800;color:var(--brand);letter-spacing:.5px;white-space:nowrap;}
+.head-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1;min-width:200px;}
+.head-nav a{
+  font-size:13.5px;color:var(--ink-2);padding:5px 10px;border-radius:var(--r-s);
+  white-space:nowrap;
+}
+.head-nav a:hover{background:#eef4f5;text-decoration:none;color:var(--brand);}
+.head-search{display:flex;align-items:center;gap:6px;flex:none;}
+.head-search input{
+  width:150px;padding:6px 10px;border:1px solid var(--line);border-radius:20px;
+  font-size:13px;font-family:var(--font);background:#fbf9f4;
+}
+.head-search input:focus{border-color:var(--brand-2);background:#fff;}
+.head-search button{
+  border:none;background:var(--brand);color:#fff;border-radius:20px;
+  padding:6px 14px;font-size:13px;cursor:pointer;font-family:var(--font);
+}
+.head-search button:hover{background:var(--brand-2);}
+
+/* ============ 首屏 ============ */
+.hero{
+  max-width:1380px;margin:0 auto;padding:26px 18px 8px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center;
+}
+.hero-label{
+  display:inline-block;font-size:12.5px;letter-spacing:2px;color:var(--brand-2);
+  border-left:3px solid var(--accent);padding-left:8px;margin-bottom:8px;
+}
+.hero h1{
+  font-size:clamp(25px,3.4vw,38px);color:var(--brand);letter-spacing:1px;
+  margin-bottom:10px;
+}
+.hero-desc{color:var(--ink-2);max-width:46em;font-size:15px;}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+.hero-meta a{
+  background:var(--brand);color:#fff;padding:7px 16px;border-radius:24px;font-size:13.5px;
+}
+.hero-meta a.ghost{background:#fff;color:var(--brand);border:1px solid var(--brand);}
+.hero-meta a:hover{text-decoration:none;opacity:.9;}
+.hero-art{position:relative;}
+.hero-art svg{width:100%;height:auto;border-radius:var(--r-l);display:block;box-shadow:var(--shadow);}
+
+/* ============ 三栏 ============ */
+.layout{
+  max-width:1380px;margin:0 auto;padding:14px 18px 40px;
+  display:grid;grid-template-columns:180px minmax(0,1fr) 240px;gap:24px;
+  align-items:start;
+}
+.col-left,.col-right{position:sticky;top:calc(var(--stick) + 8px);}
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:14px 14px;box-shadow:var(--shadow);margin-bottom:16px;
+}
+.panel h3{
+  font-size:13.5px;color:var(--brand);letter-spacing:1px;
+  padding-bottom:7px;margin-bottom:9px;border-bottom:1px dashed var(--line);
+}
+.side-nav{list-style:none;padding:0;margin:0;}
+.side-nav li{margin:0;}
+.side-nav a{
+  display:block;font-size:13px;color:var(--ink-2);padding:5px 8px;border-radius:var(--r-s);
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:#eef4f5;text-decoration:none;border-left-color:var(--accent);color:var(--brand);}
+.side-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.side-tags a{
+  font-size:12px;background:#f1efe6;color:var(--ink-2);padding:3px 8px;border-radius:20px;
+}
+.side-tags a:hover{background:var(--accent-soft);color:#8a4a12;text-decoration:none;}
+
+/* 中栏板块通用 */
+.block{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);
+  padding:20px 22px;margin-bottom:20px;box-shadow:var(--shadow);
+}
+.block > h2{
+  font-size:19px;color:var(--brand);margin-bottom:4px;display:flex;align-items:center;gap:8px;
+}
+.block > h2::before{
+  content:"";width:5px;height:18px;background:var(--accent);border-radius:3px;flex:none;
+}
+.block-sub{font-size:13px;color:var(--ink-3);margin:0 0 14px;}
+.block h3{font-size:16px;color:var(--brand-2);margin:18px 0 7px;}
+.block h4{font-size:14.5px;color:var(--ink);margin:12px 0 5px;}
+.lead{font-size:15.5px;color:var(--ink);}
+.small{font-size:13px;color:var(--ink-3);}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;}
+.card{
+  border:1px solid var(--line);border-radius:var(--r-m);padding:12px 13px;background:#fdfcf8;
+  transition:box-shadow .18s,transform .18s;
+}
+.card:hover{box-shadow:var(--shadow-lift);transform:translateY(-2px);}
+.card h4{font-size:14.5px;margin:0 0 6px;color:var(--ink);}
+.card .tags{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0;}
+.card .tags span{font-size:11.5px;background:#eaf2f3;color:var(--brand-2);padding:2px 7px;border-radius:20px;}
+.card .tags span.hot{background:var(--accent-soft);color:#8a4a12;}
+.card p{font-size:13px;color:var(--ink-2);margin:0 0 8px;}
+.card .meta{font-size:11.5px;color:var(--ink-3);display:flex;gap:10px;flex-wrap:wrap;}
+
+/* 紧凑列表 */
+.list-tight{list-style:none;padding:0;margin:0;}
+.list-tight li{
+  padding:9px 0;border-bottom:1px dashed var(--line);display:flex;gap:12px;align-items:baseline;
+}
+.list-tight li:last-child{border-bottom:none;}
+.list-tight .t{font-weight:600;font-size:14.5px;color:var(--ink);flex:none;min-width:9em;}
+.list-tight .d{font-size:13px;color:var(--ink-2);}
+.list-tight .tm{font-size:12px;color:var(--ink-3);flex:none;margin-left:auto;}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;}
+.cat{
+  border-radius:var(--r-s);padding:10px 12px;background:#f2f7f7;border:1px solid #dbe8e9;
+}
+.cat strong{display:block;font-size:14px;color:var(--brand);}
+.cat span{font-size:12px;color:var(--ink-3);}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0;}
+.compare .c{
+  border:1px solid var(--line);border-radius:var(--r-m);padding:12px;background:#fdfcf8;
+}
+.compare .c h4{margin:0 0 6px;color:var(--brand);}
+.compare .c ul{margin:0;padding-left:1.1em;font-size:13.5px;color:var(--ink-2);}
+
+/* 步骤 */
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;}
+.steps li{
+  counter-increment:s;position:relative;padding-left:40px;margin-bottom:12px;font-size:14px;color:var(--ink-2);
+}
+.steps li::before{
+  content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center;
+  font-weight:700;
+}
+
+/* FAQ */
+details{
+  border:1px solid var(--line);border-radius:var(--r-s);padding:10px 13px;margin-bottom:8px;background:#fdfcf8;
+}
+summary{cursor:pointer;font-weight:600;font-size:14.5px;color:var(--ink);list-style:none;}
+summary::-webkit-details-marker{display:none;}
+summary::before{content:"＋";color:var(--accent);margin-right:7px;font-weight:700;}
+details[open] summary::before{content:"－";}
+details p{margin:9px 0 0;font-size:13.5px;color:var(--ink-2);}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;}
+.comment{
+  border-radius:var(--r-s);background:#f7f5ee;padding:9px 11px;font-size:13px;
+  border-left:3px solid #cfe0e2;
+}
+.comment .who{font-weight:700;font-size:12.5px;color:var(--brand-2);margin-bottom:3px;}
+.comment .txt{color:var(--ink-2);}
+
+/* 资讯 */
+.news-item{padding:10px 0;border-bottom:1px dashed var(--line);}
+.news-item:last-child{border-bottom:none;}
+.news-item .h{font-size:14.5px;font-weight:600;color:var(--ink);}
+.news-item .date{font-size:12px;color:var(--ink-3);margin-left:8px;font-weight:400;}
+.news-item .abs{font-size:13px;color:var(--ink-2);}
+
+/* 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:7px;}
+.tag-index a{
+  font-size:13px;border:1px solid #cfe0e2;background:#f4f9f9;color:var(--brand-2);
+  padding:4px 11px;border-radius:20px;
+}
+.tag-index a:hover{background:var(--brand);color:#fff;text-decoration:none;border-color:var(--brand);}
+
+/* 右栏 */
+.right-list{list-style:none;padding:0;margin:0;}
+.right-list li{padding:7px 0;border-bottom:1px dashed var(--line);font-size:13px;}
+.right-list li:last-child{border-bottom:none;}
+.right-list a{color:var(--ink-2);}
+.right-list a:hover{color:var(--accent);}
+.toc{list-style:none;padding:0;margin:0;font-size:13px;}
+.toc li{margin-bottom:5px;}
+.toc a{color:var(--ink-2);display:block;padding:3px 6px;border-radius:var(--r-s);}
+.toc a:hover{background:#eef4f5;text-decoration:none;color:var(--brand);}
+
+.notice-hit{
+  font-size:12.5px;color:#8a4a12;background:var(--accent-soft);border-radius:var(--r-s);
+  padding:8px 10px;margin-bottom:10px;display:none;
+}
+
+/* 页尾 */
+.site-foot{
+  background:var(--brand);color:#d8e6e8;margin-top:10px;
+}
+.foot-inner{
+  max-width:1380px;margin:0 auto;padding:30px 18px 18px;
+  display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:24px;
+}
+.foot-brand{font-size:17px;font-weight:800;color:#fff;margin-bottom:8px;}
+.foot-inner p{font-size:13px;color:#a9c4c8;line-height:1.7;}
+.foot-inner h4{font-size:13.5px;color:var(--gold);margin-bottom:9px;letter-spacing:1px;}
+.foot-links{list-style:none;padding:0;margin:0;font-size:13px;}
+.foot-links li{margin-bottom:6px;}
+.foot-links a{color:#c6dadd;}
+.foot-links a:hover{color:#fff;}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.15);text-align:center;
+  font-size:12px;color:#8fb0b4;padding:12px 18px 18px;line-height:1.8;
+}
+
+/* 响应式 */
+@media (max-width:1080px){
+  .layout{grid-template-columns:170px minmax(0,1fr);}
+  .col-right{position:static;grid-column:1 / -1;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+  .col-right .panel{margin-bottom:0;}
+  .hero{grid-template-columns:1fr;}
+  .hero-art{max-width:520px;}
+  .foot-inner{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:780px){
+  :root{--stick:88px;}
+  .layout{grid-template-columns:1fr;padding-top:6px;}
+  .col-left{position:static;order:2;}
+  .col-left .panel{margin-bottom:14px;}
+  .col-left .side-nav{display:flex;flex-wrap:wrap;gap:4px;}
+  .col-left .side-nav li{flex:1 1 auto;}
+  .col-left .side-nav a{border-left:none;border-bottom:2px solid transparent;text-align:center;font-size:12.5px;}
+  .col-left .side-nav a:hover{border-left:none;border-bottom-color:var(--accent);}
+  .main-col{order:1;}
+  .col-right{order:3;}
+  .head-search input{width:110px;}
+  .head-nav{font-size:12.5px;}
+  .block{padding:16px 15px;}
+  .compare{grid-template-columns:1fr;}
+  .list-tight li{flex-wrap:wrap;gap:4px;}
+  .list-tight .t{min-width:0;width:100%;}
+  .list-tight .tm{margin-left:0;}
+  .foot-inner{grid-template-columns:1fr;}
+}
+@media (max-width:420px){
+  .brand-text{font-size:16.5px;}
+  .head-search{width:100%;}
+  .head-search input{flex:1;width:auto;}
+  .hero h1{letter-spacing:0;}
+}
+</style>
+</head>
+<body>
+
+<!-- 公告条 -->
+<div class="notice-bar" id="notice">
+  <div class="notice-inner">
+    <span class="notice-tag">今日出行</span>
+    <span class="n">晚高峰 17:30—19:10 时段公交班次加密，社区北门步行出口临时开放，拼车集合点移至东侧广场。</span>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="site-head" id="top">
+  <div class="head-inner">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0e3b45"/>
+        <path d="M14 40 L32 18 L50 40" fill="none" stroke="#f4b860" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="32" cy="45" r="5" fill="#f4b860"/>
+      </svg>
+      <span class="brand-text">海角社区今日回家方式</span>
+    </div>
+    <nav class="head-nav" aria-label="主题导航">
+      <a href="/#intro">回家方式说明</a>
+      <a href="/#routes">今日路线</a>
+      <a href="/#updates">实时动态</a>
+      <a href="/#cats">出行分类</a>
+      <a href="/#deep">换乘解析</a>
+      <a href="/#guide">回家指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#talks">邻里评论</a>
+    </nav>
+    <div class="head-search">
+      <input type="search" id="q" placeholder="搜路线/站点/时段" aria-label="在页面内查找回家方式">
+      <button type="button" id="qbtn">查找</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" aria-labelledby="hero-title">
+  <div>
+    <span class="hero-label">社区通勤 · 每日整理</span>
+    <h1 id="hero-title">海角社区今日回家方式</h1>
+    <p class="hero-desc">把每天下班回社区的选择讲清楚：哪条步行线最快、哪个时段公交不挤、拼车在哪个点集合、骑行遇到雨天怎么换。按到达时间、换乘次数和体力消耗来排，不堆信息，只给能直接用的方案。</p>
+    <div class="hero-meta">
+      <a href="/#routes">看今日路线</a>
+      <a href="/#deep" class="ghost">换乘怎么选</a>
+      <a href="/#faq" class="ghost">通勤问题</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 520 320" role="img">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0e3b45"/>
+          <stop offset="1" stop-color="#14626e"/>
+        </linearGradient>
+      </defs>
+      <rect width="520" height="320" rx="18" fill="url(#sky)"/>
+      <circle cx="430" cy="62" r="26" fill="#f4b860" opacity=".9"/>
+      <g fill="#0b2c34" opacity=".85">
+        <rect x="26" y="150" width="58" height="130" rx="4"/>
+        <rect x="92" y="120" width="44" height="160" rx="4"/>
+        <rect x="146" y="176" width="52" height="104" rx="4"/>
+        <rect x="356" y="138" width="46" height="142" rx="4"/>
+        <rect x="412" y="170" width="60" height="110" rx="4"/>
+      </g>
+      <g stroke="#f4b860" stroke-width="2" opacity=".5">
+        <line x1="40" y1="176" x2="70" y2="176"/>
+        <line x1="40" y1="196" x2="70" y2="196"/>
+        <line x1="104" y1="150" x2="126" y2="150"/>
+        <line x1="104" y1="170" x2="126" y2="170"/>
+        <line x1="368" y1="168" x2="390" y2="168"/>
+        <line x1="424" y1="200" x2="460" y2="200"/>
+      </g>
+      <path d="M0 282 Q130 246 260 278 T520 268 L520 320 L0 320 Z" fill="#0a242b"/>
+      <path d="M60 292 Q180 258 320 288 Q420 310 500 292" fill="none" stroke="#f4b860" stroke-width="3" stroke-dasharray="10 9" opacity=".85"/>
+      <circle cx="180" cy="272" r="7" fill="#f4b860"/>
+      <circle cx="330" cy="284" r="7" fill="#f4b860"/>
+      <path d="M262 258 L262 230 M262 230 L246 244 M262 230 L278 244" stroke="#e9f3f4" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </svg>
+  </div>
+</section>
+
+<!-- 三栏 -->
+<div class="layout">
+
+  <!-- 左栏 -->
+  <aside class="col-left" aria-label="频道与分类索引">
+    <div class="panel">
+      <h3>频道导航</h3>
+      <ul class="side-nav">
+        <li><a href="/#intro">回家方式说明</a></li>
+        <li><a href="/#routes">今日路线推荐</a></li>
+        <li><a href="/#updates">晚高峰动态</a></li>
+        <li><a href="/#cats">出行分类入口</a></li>
+        <li><a href="/#deep">换乘与耗时解析</a></li>
+        <li><a href="/#guide">回家操作指南</a></li>
+        <li><a href="/#faq">通勤常见问答</a></li>
+        <li><a href="/#talks">邻里评论</a></li>
+        <li><a href="/#news">出行资讯</a></li>
+        <li><a href="/#picks">方向索引</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>时段标签</h3>
+      <div class="side-tags">
+        <a href="/#updates">17:30 首班加密</a>
+        <a href="/#updates">18:00 高峰</a>
+        <a href="/#updates">18:40 回落</a>
+        <a href="/#routes">步行 12 分钟</a>
+        <a href="/#routes">地铁换乘</a>
+        <a href="/#routes">拼车集合</a>
+        <a href="/#cats">雨天备选</a>
+        <a href="/#cats">骑行接驳</a>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>常用站点</h3>
+      <ul class="side-nav">
+        <li><a href="/#deep">东侧广场集合点</a></li>
+        <li><a href="/#deep">北门步行出口</a></li>
+        <li><a href="/#deep">环城线 B 口</a></li>
+        <li><a href="/#deep">社区南侧公交站</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- 中栏 -->
+  <main class="main-col">
+
+    <div class="notice-hit" id="hitbox" role="status" aria-live="polite"></div>
+
+    <!-- 1 内容简介 -->
+    <section class="block" id="intro">
+      <h2>回家方式说明：先把选择讲明白</h2>
+      <p class="block-sub">按到达时间、换乘次数、体力消耗三个维度整理，不追求方案数量。</p>
+
+      <p class="lead">海角社区今日回家方式，指的是每天下班后从工作区返回到社区内自己那栋楼的实际走法。它不只是“坐哪路车”，还包括从公司门口到车站的那段路、下车后穿小区的那段路，以及遇到雨天、加班、带东西时怎么临时改。把这几个环节拆开看，选择就清楚了。</p>
+
+      <p>多数人回家只关心三件事：多久能到、要不要换乘、累不累。这三件事常常互相打架。地铁快，但两头各走七八分钟；公交少走路，但晚高峰容易堵在环城路；拼车省心，但要等齐人；骑行最自由，可下雨天就不合适。所以真正有用的不是“最佳方案”，而是分场景的方案。</p>
+
+      <p>我们把回家方式分成四类。第一类是步行接驳型，适合工作区距社区三公里以内、愿意走一段的人；第二类是轨道换乘型，适合跨区通勤、对时间敏感的人；第三类是公交直达型，适合带东西、不想多走路的人；第四类是拼车与骑行，适合时间弹性大、或者错过班次的人。四类各有适用条件，下面会逐条说。</p>
+
+      <p>时间上，晚高峰可以切成三段。17:30 到 18:10 是起步段，车还不太满，能赶上就尽量赶上；18:10 到 18:50 是压力最大的时段，站台和车厢都挤，换乘通道排队明显；18:50 以后逐步回落，但末段班次间隔会拉长。知道自己落在哪一段，比记住具体几点发车更实用。</p>
+
+      <p>另外提醒一点：社区北门在晚高峰会临时开放步行出口，从北门进比绕南门平均少走四到六分钟。这个变化对步行和骑行的人影响最大，对坐公交到南侧站的人反而没差别。选择路线时，把“从哪个门进社区”单独当成一步来考虑，往往比换一条主路更省时间。</p>
+    </section>
+
+    <!-- 2 热门路线推荐 -->
+    <section class="block" id="routes">
+      <h2>今日回家路线推荐</h2>
+      <p class="block-sub">六条常用走法，按适用人群标注，热度为社区内当日讨论量示意。</p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>环城线 B 口换乘步行线</h4>
+          <div class="tags"><span>轨道换乘</span><span>少走路</span><span class="hot">高峰首选</span></div>
+          <p>出站走北门，全程约 26 分钟，换乘一次，适合 18:00 前离岗的人。</p>
+          <div class="meta"><span>耗时 26 分</span><span>换乘 1 次</span><span>热度 高</span></div>
+        </article>
+        <article class="card">
+          <h4>南侧公交站直达线</h4>
+          <div class="tags"><span>公交直达</span><span>带东西</span><span>少步行</span></div>
+          <p>下车即到社区南门，适合拎电脑包或买菜回家，堵车时多花 8 分钟。</p>
+          <div class="meta"><span>耗时 32 分</span><span>换乘 0 次</span><span>热度 高</span></div>
+        </article>
+        <article class="card">
+          <h4>东侧广场拼车集合线</h4>
+          <div class="tags"><span>拼车</span><span>错峰</span><span class="hot">雨天备选</span></div>
+          <p>18:20 与 18:50 两班集合，四人成行，适合加班到较晚的人。</p>
+          <div class="meta"><span>耗时 22 分</span><span>等待 6 分</span><span>热度 中</span></div>
+        </article>
+        <article class="card">
+          <h4>沿河骑行接驳线</h4>
+          <div class="tags"><span>骑行</span><span>自由</span><span>晴天</span></div>
+          <p>沿河堤慢行道直行，全程无红绿灯干扰，雨天不建议走。</p>
+          <div class="meta"><span>耗时 19 分</span><span>体力 中</span><span>热度 中</span></div>
+        </article>
+        <article class="card">
+          <h4>两段步行加一次短驳</h4>
+          <div class="tags"><span>步行接驳</span><span>零等待</span><span>三公里内</span></div>
+          <p>适合工作区离社区近的人，走两段加一班短驳车，几乎不用等。</p>
+          <div class="meta"><span>耗时 24 分</span><span>换乘 1 次</span><span>热度 中</span></div>
+        </article>
+        <article class="card">
+          <h4>加班后夜段回家线</h4>
+          <div class="tags"><span>夜段</span><span>末班衔接</span><span>安全</span></div>
+          <p>20:30 后以轨道为主，末班衔接紧，建议提前一站换乘留余量。</p>
+          <div class="meta"><span>耗时 29 分</span><span>换乘 1 次</span><span>热度 低</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 最新动态 -->
+    <section class="block" id="updates">
+      <h2>晚高峰实时动态</h2>
+      <p class="block-sub">按时间顺序排列的当日变化，均为社区内当日观察记录示意。</p>
+      <ul class="list-tight">
+        <li><span class="t">17:30 公交加密</span><span class="d">南侧公交站首班加密车发出，站台排队明显缩短。</span><span class="tm">17:30</span></li>
+        <li><span class="t">17:45 北门开放</span><span class="d">社区北门步行出口临时开放，步行回家可少绕一段。</span><span class="tm">17:45</span></li>
+        <li><span class="t">18:05 换乘通道排队</span><span class="d">环城线 B 口换乘通道出现短时排队，建议改走 A 口。</span><span class="tm">18:05</span></li>
+        <li><span class="t">18:15 拼车集合调整</span><span class="d">东侧广场拼车集合点东移约五十米，避开施工围挡。</span><span class="tm">18:15</span></li>
+        <li><span class="t">18:25 环城路缓行</span><span class="d">公交在环城路中段缓行，直达线预计多花六到八分钟。</span><span class="tm">18:25</span></li>
+        <li><span class="t">18:40 骑行道畅通</span><span class="d">沿河骑行道无积水，风向偏顺，骑行耗时略短于平日。</span><span class="tm">18:40</span></li>
+        <li><span class="t">18:50 高峰回落</span><span class="d">站台客流开始下降，换乘通道恢复通行，等待时间缩短。</span><span class="tm">18:50</span></li>
+        <li><span class="t">19:05 末段间隔拉长</span><span class="d">轨道班次间隔由四分钟调整为六分钟，需预留等待。</span><span class="tm">19:05</span></li>
+        <li><span class="t">19:20 拼车第二班</span><span class="d">东侧广场第二班拼车集合，适合加班到较晚的人。</span><span class="tm">19:20</span></li>
+        <li><span class="t">19:35 雨天提示</span><span class="d">预报夜间有短时降雨，骑行建议改步行接驳或公交。</span><span class="tm">19:35</span></li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="cats">
+      <h2>回家方式分类入口</h2>
+      <p class="block-sub">按出行条件归类，点选进入对应说明段落。</p>
+      <div class="cat-grid">
+        <a class="cat" href="/#deep"><strong>轨道换乘回家</strong><span>跨区通勤、时间敏感</span></a>
+        <a class="cat" href="/#deep"><strong>公交直达回家</strong><span>带东西、少走路</span></a>
+        <a class="cat" href="/#deep"><strong>拼车集合回家</strong><span>错峰、雨天备选</span></a>
+        <a class="cat" href="/#deep"><strong>骑行接驳回家</strong><span>晴天、体力允许</span></a>
+        <a class="cat" href="/#deep"><strong>步行短驳回家</strong><span>三公里内、零等待</span></a>
+        <a class="cat" href="/#deep"><strong>夜段末班回家</strong><span>加班晚、衔接紧</span></a>
+        <a class="cat" href="/#guide"><strong>雨天改道方案</strong><span>降速、换乘调整</span></a>
+        <a class="cat" href="/#faq"><strong>换乘次数比较</strong><span>一次还是两次更省</span></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="deep">
+      <h2>回家路线深度解析：时间、换乘与体力怎么权衡</h2>
+      <p class="block-sub">把“快”拆成三段来算，比只看总耗时更接近真实体验。</p>
+
+      <p>讨论回家方式，最容易犯的错是只比总时长。可总时长里藏着三段完全不同性质的时间：等车、在车上、下车后走路。等车是纯损耗，在车上可以坐着也可以站着，走路消耗体力。同样 28 分钟的两条路线，一条是“等 9 分钟坐 12 分钟走 7 分钟”，另一条是“等 2 分钟坐 18 分钟走 8 分钟”，感受差得很远，尤其在下雨天和带着东西的时候。</p>
+
+      <h3>第一段：从工位到第一个上车点</h3>
+      <p>这段路常被忽略，却最稳定可控。它取决于你出楼的方向和路口红绿灯。往东走能直接接到环城线 B 口，往西走要过两个路口才到南侧公交站。很多人以为自己选的是车，其实选的是出楼方向。固定的出楼路线比临时导航更靠谱，因为你每天都在同一个位置出发。</p>
+      <p>如果你经常在 18:00 之后离岗，建议把第一段固定成“往东走”，因为 B 口在 18:10 后排队虽然长，但进站口多，通行速度反而比南侧公交站快。这个判断每季度可以复核一次，路口施工或站点调整都会改变结论。</p>
+
+      <h3>第二段：在车上的时间，以及换乘的隐性代价</h3>
+      <p>换乘一次，账面上多花两到四分钟，实际往往多花六到八分钟，因为要算上站台步行、等下一班、以及车厢内重新找位置。所以换乘次数比总时长更值得盯。一次换乘是舒适区，两次换乘在晚高峰就容易失控，尤其是第二段班次间隔较长的时候。</p>
+      <ul>
+        <li>一次换乘：可控，适合每天固定通勤。</li>
+        <li>两次换乘：仅在首段能明显缩短总时长时才值得。</li>
+        <li>零换乘：公交直达最省心，但要接受堵车波动。</li>
+      </ul>
+      <p>海角社区今日回家方式的整理里，我们把换乘代价单独列出来，就是因为它是很多人“看时间选了快线、实际到家更晚”的原因。</p>
+
+      <h3>第三段：下车后进社区的那段路</h3>
+      <p>这段路有两个变量：从哪个门进，以及门内到楼栋的距离。北门开放时，从北门进平均比南门少走四到六分钟，但北门只对步行和骑行开放，坐公交到南侧站的人用不上。所以“北门开放”这条信息对谁有用，要看你的主段交通方式，不是所有人都受益。</p>
+      <p>门内距离也值得算一次。社区东西跨度不小，从东侧广场走到西侧楼栋要九分钟左右。拼车集合点在东侧广场，如果你住在西侧，拼车省下的时间会被最后这段路吃掉一部分。反过来，住东侧的人拼车收益就很高。</p>
+
+      <h3>四类方式的适用边界</h3>
+      <div class="compare">
+        <div class="c">
+          <h4>轨道换乘 vs 公交直达</h4>
+          <ul>
+            <li>赶时间、能接受走路：选轨道换乘。</li>
+            <li>带东西、不想站：选公交直达。</li>
+            <li>雨天：轨道更稳，公交易堵。</li>
+            <li>18:50 后：公交班次变稀，轨道更可靠。</li>
+          </ul>
+        </div>
+        <div class="c">
+          <h4>拼车 vs 骑行</h4>
+          <ul>
+            <li>两人以上同行、怕淋雨：选拼车。</li>
+            <li>独自、天气好、想活动：选骑行。</li>
+            <li>拼车要等齐人，骑行零等待。</li>
+            <li>夜段骑行注意照明，拼车更稳。</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>按离岗时间给一个简单结论</h3>
+      <ol class="steps">
+        <li>17:30 前离岗：优先轨道换乘，站台不挤，能赶上加密班次。</li>
+        <li>18:00 到 18:30 离岗：避开 B 口排队，改走 A 口或选公交直达。</li>
+        <li>18:30 到 19:00 离岗：拼车收益最高，正好赶上第二班集合。</li>
+        <li>19:00 后离岗：以轨道为主，提前一站换乘留出余量。</li>
+      </ol>
+      <p>这套结论不是固定的，遇到施工、降雨、临时管制都要重算。但判断顺序不变：先看离岗时间，再看换乘次数，最后看最后一段进社区走哪个门。把这三步固定下来，每天回家就不用重新纠结一遍。</p>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide">
+      <h2>回家方式使用指南</h2>
+      <p class="block-sub">从查路线到出门，按顺序走一遍。</p>
+      <ol class="steps">
+        <li>先确认离岗时间落在哪个时段，起步段、压力段还是回落段。</li>
+        <li>看当日动态里有没有站点调整，尤其是集合点位移和出口开放。</li>
+        <li>在分类入口里选主段交通方式，再看最后一段从哪个门进社区。</li>
+        <li>把换乘次数控制在一次以内，两次换乘只在首段明显更快时才用。</li>
+        <li>出门前再刷一次动态，晚高峰变化快，五分钟前的信息可能已经过时。</li>
+        <li>到家后如果发现某条路线实际耗时与预估差距大，记下来，下次直接换。</li>
+      </ol>
+      <p>手机上建议把常用站点和集合点放在同一屏能看到的范围，减少临场翻找。页面顶部的查找框可以按站点名或时段筛，输入“北门”“拼车”“18:40”这类词都能定位到对应段落。</p>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block" id="faq">
+      <h2>通勤常见问答</h2>
+      <p class="block-sub">六个高频问题，按真实提问方式整理。</p>
+
+      <details>
+        <summary>晚高峰从环城线回家要换乘几次比较稳？</summary>
+        <p>一次最稳。两次换乘在 18:10 到 18:50 这段容易失控，因为第二段班次间隔会被拉长，站台步行也要算进去。除非首段能明显缩短总时长，否则不建议在压力段用两次换乘。</p>
+      </details>
+      <details>
+        <summary>带东西回家走哪条路线省力？</summary>
+        <p>优先公交直达，下车即到社区南门，步行距离最短。轨道换乘虽然快，但换乘通道和出站台阶对拎东西的人不友好。如果一定要坐轨道，选有电梯的出站口，多走几十米换省力。</p>
+      </details>
+      <details>
+        <summary>下雨天骑行还能走吗？</summary>
+        <p>短时小雨可以，但沿河堤段风大、路面湿滑，建议改步行接驳或公交。夜间降雨时骑行照明条件差，安全性下降明显，不如等一班拼车。</p>
+      </details>
+      <details>
+        <summary>拼车集合点一般在哪，几点有班次？</summary>
+        <p>集合点在东侧广场，晚高峰通常 18:20 和 18:50 两班，四人成行。遇到施工围挡时集合点会东移，具体看当日动态。住西侧楼栋的人要算上从广场走回去的时间。</p>
+      </details>
+      <details>
+        <summary>18:50 以后回家还有哪些选择？</summary>
+        <p>以轨道为主，公交班次变稀，拼车还有第二班。这个时段换乘通道已经不排队，但轨道班次间隔拉长到六分钟左右，提前一站换乘能留出余量。</p>
+      </details>
+      <details>
+        <summary>北门开放对坐公交的人有用吗？</summary>
+        <p>基本没用。北门只对步行和骑行开放，公交停在社区南侧站，从南门进更顺。北门开放主要惠及步行接驳和骑行的人，平均少走四到六分钟。</p>
+      </details>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="talks">
+      <h2>邻里评论</h2>
+      <p class="block-sub">社区内住户与通勤者的当日留言，昵称为示意。</p>
+      <div class="comment-grid">
+        <div class="comment"><div class="who">晚风穿过环城路</div><div class="txt">B 口排队那会儿改走 A 口，确实快了几分钟，感谢提醒。</div></div>
+        <div class="comment"><div class="who">拎菜的阿哲</div><div class="txt">带东西还是公交直达舒服，多等一会儿也认了。</div></div>
+        <div class="comment"><div class="who">西侧六栋小周</div><div class="txt">拼车是快，但从东侧广场走回西边也要九分钟，算下来一般。</div></div>
+        <div class="comment"><div class="who">骑行老陈</div><div class="txt">今天顺风，沿河那段骑得很顺，十九分钟到家。</div></div>
+        <div class="comment"><div class="who">加班到八点</div><div class="txt">夜段还是轨道稳，末班衔接别卡太紧，留一站余量。</div></div>
+        <div class="comment"><div class="who">北门常客</div><div class="txt">北门开了以后每天少走一段，希望高峰期都能开。</div></div>
+        <div class="comment"><div class="who">雨天不出门</div><div class="txt">预报有雨的话我直接选拼车，骑行湿鞋太难受。</div></div>
+        <div class="comment"><div class="who">两段步行党</div><div class="txt">三公里内走路加短驳其实很省心，不用等车。</div></div>
+        <div class="comment"><div class="who">换乘算不明白</div><div class="txt">之前一直选两次换乘的线，看了对比才发现并不快。</div></div>
+        <div class="comment"><div class="who">东侧广场等人</div><div class="txt">集合点东移之后好找了，围挡那边确实走不通。</div></div>
+        <div class="comment"><div class="who">公交常客老李</div><div class="txt">环城路一堵就没脾气，但胜在不用换乘，各有取舍。</div></div>
+        <div class="comment"><div class="who">夜班回家的人</div><div class="txt">19 点以后班次间隔变长，提前看好时间能少等。</div></div>
+        <div class="comment"><div class="who">新手通勤</div><div class="txt">按离岗时间分段的说法挺实用，不用每天重新纠结。</div></div>
+        <div class="comment"><div class="who">住东侧的小林</div><div class="txt">我住东边，拼车收益确实高，最后那段路很短。</div></div>
+        <div class="comment"><div class="who">走路看风景</div><div class="txt">不赶时间的时候步行接驳最舒服，还能顺路买菜。</div></div>
+        <div class="comment"><div class="who">带娃通勤</div><div class="txt">推车的话只考虑公交直达，换乘太折腾。</div></div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="news">
+      <h2>出行资讯</h2>
+      <p class="block-sub">与社区回家路线相关的近期记录。</p>
+      <div class="news-item">
+        <div class="h">环城线 B 口换乘通道完成分流改造<span class="date">2024-11-18</span></div>
+        <div class="abs">通道加装隔离栏后，晚高峰排队方向更清晰，逆行人流减少。</div>
+      </div>
+      <div class="news-item">
+        <div class="h">社区北门步行出口试行弹性开放<span class="date">2024-11-12</span></div>
+        <div class="abs">晚高峰时段开放，主要缓解南门人流集中，试行期按月评估。</div>
+      </div>
+      <div class="news-item">
+        <div class="h">南侧公交站加密班次覆盖晚高峰<span class="date">2024-11-06</span></div>
+        <div class="abs">17:30 至 19:10 之间班次间隔缩短，站台排队情况有所改善。</div>
+      </div>
+      <div class="news-item">
+        <div class="h">沿河骑行道加装夜间照明<span class="date">2024-10-29</span></div>
+        <div class="abs">堤段照明补齐后，夜段骑行可视条件提升，仍建议减速慢行。</div>
+      </div>
+      <div class="news-item">
+        <div class="h">东侧广场施工围挡调整集合点位置<span class="date">2024-10-21</span></div>
+        <div class="abs">围挡东移，拼车集合点随之调整，现场增设了临时指示牌。</div>
+      </div>
+      <div class="news-item">
+        <div class="h">雨天出行提示：换乘预留时间加长<span class="date">2024-10-15</span></div>
+        <div class="abs">降雨时段站台湿滑、上下车变慢，建议比平日提前十分钟出门。</div>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="block" id="picks">
+      <h2>方向索引</h2>
+      <p class="block-sub">按具体出行方向查找，点选跳到对应说明。</p>
+      <div class="tag-index">
+        <a href="/#deep">轨道换乘耗时怎么算</a>
+        <a href="/#deep">公交直达堵车波动</a>
+        <a href="/#deep">拼车集合点位置</a>
+        <a href="/#deep">骑行接驳雨天替代</a>
+        <a href="/#deep">步行短驳三公里内</a>
+        <a href="/#deep">夜段末班衔接余量</a>
+        <a href="/#faq">换乘一次还是两次</a>
+        <a href="/#guide">带东西回家省力走法</a>
+      </div>
+    </section>
+
+    <!-- 11 趋势观察 -->
+    <section class="block" id="trend">
+      <h2>近期回家方式趋势观察</h2>
+      <p class="block-sub">从社区内当日讨论与出行记录归纳的三点变化。</p>
+      <p>第一，选择轨道换乘的人比上月多，主要因为换乘通道分流后排队时间下降。第二，拼车的使用集中在 18:30 之后，与公交班次间隔拉长的时间点吻合。第三，骑行在晴天的工作日明显增加，但遇到降雨预报时几乎全部转向公交或拼车，说明天气仍是决定性变量。</p>
+      <p>这三点变化指向同一个结论：回家方式的选择正在从“认准一条线”转向“按当天条件切换”。这对通勤者其实是好事，手里有两套备选，遇到施工、降雨或加班都不至于被动。建议每个人都准备一条主线和一条备选线，主线求稳，备选线求快或求省力，按当天情况二选一。</p>
+    </section>
+
+  </main>
+
+  <!-- 右栏 -->
+  <aside class="col-right" aria-label="辅助阅读">
+    <div class="panel">
+      <h3>页内目录</h3>
+      <ul class="toc">
+        <li><a href="/#intro">回家方式说明</a></li>
+        <li><a href="/#routes">今日路线推荐</a></li>
+        <li><a href="/#updates">晚高峰实时动态</a></li>
+        <li><a href="/#cats">分类入口</a></li>
+        <li><a href="/#deep">换乘与耗时解析</a></li>
+        <li><a href="/#guide">使用指南</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+        <li><a href="/#talks">邻里评论</a></li>
+        <li><a href="/#news">出行资讯</a></li>
+        <li><a href="/#picks">方向索引</a></li>
+        <li><a href="/#trend">趋势观察</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>热门条目</h3>
+      <ul class="right-list">
+        <li><a href="/#routes">环城线 B 口换乘步行线</a></li>
+        <li><a href="/#routes">南侧公交站直达线</a></li>
+        <li><a href="/#updates">18:15 拼车集合调整</a></li>
+        <li><a href="/#deep">换乘次数比总时长更重要</a></li>
+        <li><a href="/#faq">下雨天骑行还能走吗</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>延伸阅读</h3>
+      <ul class="right-list">
+        <li><a href="/#news">北门弹性开放试行</a></li>
+        <li><a href="/#news">骑行道夜间照明补齐</a></li>
+        <li><a href="/#deep">按离岗时间给结论</a></li>
+        <li><a href="/#guide">出门前的检查顺序</a></li>
+      </ul>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">海角社区今日回家方式</div>
+      <p>围绕每天下班回到社区的实际走法，整理路线、时段、换乘与备选方案，帮助通勤者和住户按当天条件做出选择。</p>
+    </div>
+    <div>
+      <h4>内容栏目</h4>
+      <ul class="foot-links">
+        <li><a href="/#intro">回家方式说明</a></li>
+        <li><a href="/#routes">今日路线推荐</a></li>
+        <li><a href="/#updates">晚高峰动态</a></li>
+        <li><a href="/#deep">换乘解析</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>出行参考</h4>
+      <ul class="foot-links">
+        <li><a href="/#cats">分类入口</a></li>
+        <li><a href="/#guide">使用指南</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+        <li><a href="/#picks">方向索引</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>社区互动</h4>
+      <ul class="foot-links">
+        <li><a href="/#talks">邻里评论</a></li>
+        <li><a href="/#news">出行资讯</a></li>
+        <li><a href="/#trend">趋势观察</a></li>
+        <li><a href="/#top">返回顶部</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    部分内容为示例数据，仅用于展示页面结构。<br>
+    © 2024 海角社区今日回家方式 · 内容整理与排版示例
+  </div>
+</footer>
+
+<script>
+(function(){
+  var q=document.getElementById('q');
+  var btn=document.getElementById('qbtn');
+  var box=document.getElementById('hitbox');
+  var sections=[].slice.call(document.querySelectorAll('main .block'));
+  var extra=[].slice.call(document.querySelectorAll('.col-right .panel, .col-left .panel'));
+
+  function clearHits(){
+    sections.forEach(function(s){s.style.outline='';s.style.outlineOffset='';});
+    box.style.display='none';
+    box.textContent='';
+  }
+
+  function search(){
+    var kw=(q.value||'').trim();
+    if(!kw){clearHits();return;}
+    var hits=[];
+    sections.forEach(function(s){
+      if(s.textContent.indexOf(kw)>-1){
+        s.style.outline='2px solid #d97a2b';
+        s.style.outlineOffset='3px';
+        hits.push(s);
+      }else{
+        s.style.outline='';
+        s.style.outlineOffset='';
+      }
+    });
+    if(hits.length){
+      box.style.display='block';
+      box.textContent='找到 '+hits.length+' 个与“'+kw+'”相关的板块：'+hits.map(function(s){
+        var h=s.querySelector('h2');
+        return h?h.textContent:'';
+      }).join('、')+'。已用描边标出。';
+      hits[0].scrollIntoView({behavior:'smooth',block:'start'});
+    }else{
+      box.style.display='block';
+      box.textContent='没有找到与“'+kw+'”相关的内容。可以试试“北门”“拼车”“换乘”“18:40”这类词。';
+    }
+  }
+
+  btn.addEventListener('click',search);
+  q.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){e.preventDefault();search();}
+  });
+  q.addEventListener('input',function(){
+    if(!q.value.trim()){clearHits();}
+  });
+})();
+</script>
+</body>
+  </html>
