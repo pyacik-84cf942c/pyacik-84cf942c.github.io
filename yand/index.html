@@ -1,0 +1,1007 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yandex每日大赛入口-每日大赛参赛入口_每日大赛怎么参加_与同类赛事对比</title>
+<meta name="description" content="yandex每日大赛入口页面聚合每日大赛的参赛入口方向、赛题类型与日程节奏说明，并整理参赛条件、作品提交要点及与同类创作赛事的对比参考，适合准备参赛与围观的创作爱好者查阅。">
+<meta name="keywords" content="每日大赛赛程,创作赛事参赛条件,作品提交要点,赛事对比参考,每日挑战玩法">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Cpath d='M18 44 L32 16 L46 44 Z' fill='none' stroke='%23f2b544' stroke-width='4' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='36' r='4' fill='%23f2b544'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#16202f;
+  --ink-soft:#3d4a5e;
+  --muted:#6b7686;
+  --line:#dfe4ec;
+  --line-soft:#eaeef5;
+  --bg:#f4f6fa;
+  --panel:#ffffff;
+  --brand:#1b2a4a;
+  --brand-2:#2b4270;
+  --accent:#e0a02c;
+  --accent-soft:#fdf3dd;
+  --teal:#1f7a6c;
+  --teal-soft:#e3f2ee;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(22,32,47,.06),0 6px 18px rgba(22,32,47,.06);
+  --shadow-soft:0 1px 2px rgba(22,32,47,.05);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,sans-serif;
+  --stick:112px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .85em}
+ul,ol{margin:0 0 .85em;padding-left:1.15em}
+li{margin:.25em 0}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* ============ 公告条 ============ */
+.notice-bar{
+  position:sticky;top:0;z-index:60;
+  background:linear-gradient(90deg,#1b2a4a,#2b4270 55%,#1f7a6c);
+  color:#f2f5fa;font-size:13px;
+}
+.notice-inner{
+  max-width:1360px;margin:0 auto;padding:8px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:nowrap;overflow:hidden;
+}
+.notice-tag{
+  flex:0 0 auto;background:var(--accent);color:#231a05;font-weight:700;
+  padding:1px 8px;border-radius:20px;font-size:12px;letter-spacing:.5px;
+}
+.notice-text{flex:1 1 auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.notice-link{flex:0 0 auto;font-weight:600;border-bottom:1px solid rgba(242,245,250,.5);padding-bottom:1px}
+
+/* ============ 页头 ============ */
+.site-header{
+  position:sticky;top:33px;z-index:55;background:var(--panel);
+  border-bottom:1px solid var(--line);box-shadow:var(--shadow-soft);
+}
+.header-inner{
+  max-width:1360px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:22px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand-mark{width:38px;height:38px;flex:0 0 auto}
+.brand-text{font-size:19px;font-weight:800;letter-spacing:.3px;color:var(--brand)}
+.header-nav{display:flex;gap:4px;flex:1 1 auto;flex-wrap:wrap}
+.header-nav a{
+  padding:5px 10px;border-radius:20px;font-size:14px;color:var(--ink-soft);
+  transition:background .15s,color .15s;white-space:nowrap;
+}
+.header-nav a:hover{background:var(--accent-soft);color:#7a5307}
+.header-search{flex:0 0 220px;position:relative}
+.header-search input{
+  width:100%;padding:7px 12px;border:1px solid var(--line);border-radius:20px;
+  font-family:inherit;font-size:13.5px;background:#fbfcfe;color:var(--ink);
+}
+.header-search input:focus{border-color:var(--brand-2);background:#fff;outline:none;box-shadow:0 0 0 3px rgba(43,66,112,.12)}
+.search-msg{
+  position:absolute;top:calc(100% + 6px);left:0;right:0;background:#fff;
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:6px 10px;
+  font-size:12.5px;color:var(--muted);box-shadow:var(--shadow);display:none;
+}
+.search-msg.show{display:block}
+
+/* ============ 首屏 ============ */
+.hero{
+  background:
+    radial-gradient(900px 320px at 85% -10%,rgba(224,160,44,.20),transparent 70%),
+    radial-gradient(700px 260px at 8% 110%,rgba(31,122,108,.18),transparent 70%),
+    linear-gradient(160deg,#1b2a4a 0%,#22345a 52%,#1b2a4a 100%);
+  color:#eef2f8;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:radial-gradient(600px 300px at 70% 20%,#000,transparent 75%);
+}
+.hero-inner{
+  max-width:1360px;margin:0 auto;padding:44px 20px 40px;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:center;
+  position:relative;z-index:1;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1.2px;
+  color:#f2c46a;border:1px solid rgba(242,196,106,.45);border-radius:20px;padding:3px 12px;margin-bottom:14px;
+}
+.hero h1{font-size:36px;letter-spacing:.5px;margin-bottom:14px;color:#fff}
+.hero-lead{font-size:15.5px;color:#c8d3e4;max-width:600px;margin-bottom:18px}
+.hero-points{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-wrap:wrap;gap:8px}
+.hero-points li{
+  font-size:13px;padding:4px 12px;border-radius:20px;background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.14);color:#dfe7f3;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  display:inline-block;padding:9px 20px;border-radius:24px;font-size:14px;font-weight:600;
+  border:1px solid transparent;cursor:pointer;transition:transform .12s,background .15s;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#2a1d02}
+.btn-primary:hover{background:#edb14a}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#eef2f8}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.hero-visual{
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14);
+  border-radius:16px;padding:16px;backdrop-filter:blur(2px);
+}
+.visual-head{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:#a9b8d0;margin-bottom:10px}
+.visual-dot{display:flex;gap:5px}
+.visual-dot i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.28);display:block}
+.visual-dot i:first-child{background:var(--accent)}
+.slot-row{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:12px}
+.slot{
+  aspect-ratio:1/1;border-radius:7px;background:rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;font-size:11.5px;color:#9fb0c9;
+  border:1px solid rgba(255,255,255,.07);
+}
+.slot.on{background:rgba(224,160,44,.9);color:#2a1d02;font-weight:700;border-color:transparent}
+.slot.done{background:rgba(31,122,108,.6);color:#dff3ee}
+.visual-foot{display:flex;justify-content:space-between;font-size:12.5px;color:#b7c4d8;border-top:1px dashed rgba(255,255,255,.16);padding-top:10px}
+.visual-foot b{color:#f2c46a}
+
+/* ============ 主容器三栏 ============ */
+.layout{
+  max-width:1360px;margin:0 auto;padding:26px 20px 50px;
+  display:grid;grid-template-columns:176px minmax(0,1fr) 244px;gap:26px;align-items:start;
+}
+/* 左栏 */
+.col-left{position:sticky;top:var(--stick);align-self:start}
+.side-panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 14px 16px;margin-bottom:16px;box-shadow:var(--shadow-soft);
+}
+.side-title{
+  font-size:12.5px;font-weight:700;letter-spacing:1px;color:var(--muted);
+  margin-bottom:10px;padding-bottom:7px;border-bottom:1px solid var(--line-soft);
+}
+.channel-list{list-style:none;padding:0;margin:0}
+.channel-list li{margin:0}
+.channel-list a{
+  display:flex;align-items:center;gap:7px;padding:6px 8px;border-radius:7px;
+  font-size:13.5px;color:var(--ink-soft);
+}
+.channel-list a:hover{background:var(--accent-soft);color:#7a5307}
+.channel-list a::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);flex:0 0 auto}
+.filter-chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  font-family:inherit;font-size:12.5px;padding:4px 10px;border-radius:20px;cursor:pointer;
+  border:1px solid var(--line);background:#fbfcfe;color:var(--ink-soft);transition:.15s;
+}
+.chip:hover{border-color:var(--brand-2);color:var(--brand)}
+.chip.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+/* 中栏 */
+.col-main{min-width:0}
+.block{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px 24px;margin-bottom:22px;box-shadow:var(--shadow-soft);
+  scroll-margin-top:var(--stick);
+}
+.block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.block h2{font-size:20px;color:var(--brand);position:relative;padding-left:12px}
+.block h2::before{
+  content:"";position:absolute;left:0;top:4px;bottom:4px;width:4px;border-radius:2px;
+  background:linear-gradient(180deg,var(--accent),var(--teal));
+}
+.block-sub{font-size:13px;color:var(--muted)}
+.block h3{font-size:16px;color:var(--brand-2);margin:20px 0 8px}
+.block h3:first-of-type{margin-top:0}
+.prose p{color:var(--ink-soft)}
+.prose strong{color:var(--ink)}
+
+/* 热门卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:14px}
+.card{
+  border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:13px 14px 12px;
+  background:#fcfdff;display:flex;flex-direction:column;gap:7px;transition:.15s;
+}
+.card:hover{border-color:#c6d3e6;box-shadow:var(--shadow)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.card h3{font-size:15px;color:var(--ink);margin:0;line-height:1.45}
+.type-tag{
+  flex:0 0 auto;font-size:11.5px;padding:2px 8px;border-radius:12px;
+  background:var(--teal-soft);color:#155e53;font-weight:600;white-space:nowrap;
+}
+.card-desc{font-size:13px;color:var(--ink-soft);margin:0;line-height:1.65}
+.tag-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
+.tag{font-size:11.5px;padding:2px 8px;border-radius:10px;background:#eef2f9;color:#4a5a72}
+.card-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);border-top:1px dashed var(--line-soft);padding-top:7px}
+
+/* 最新更新列表 */
+.update-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0 22px}
+.update-list li{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line-soft);font-size:13.5px}
+.update-list li:last-child{border-bottom:none}
+.up-time{flex:0 0 42px;color:var(--teal);font-weight:700;font-size:12.5px;padding-top:2px}
+.up-body b{display:block;color:var(--ink);font-size:14px;font-weight:600}
+.up-body span{color:var(--ink-soft);font-size:13px}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px}
+.cat-item{
+  border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:11px 13px;
+  background:linear-gradient(180deg,#fbfcff,#f5f8fd);transition:.15s;
+}
+.cat-item:hover{border-color:var(--brand-2);background:#fff}
+.cat-item b{display:block;font-size:14px;color:var(--brand);margin-bottom:2px}
+.cat-item span{font-size:12px;color:var(--muted)}
+
+/* 深度正文 */
+.deep h3{border-left:3px solid var(--accent);padding-left:10px;margin-left:-13px}
+.deep ul{padding-left:1.3em}
+.deep li{color:var(--ink-soft);font-size:14.5px}
+.callout{
+  background:var(--accent-soft);border-left:3px solid var(--accent);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:12px 16px;margin:14px 0;
+  font-size:14px;color:#5d4408;
+}
+
+/* 体验指南 步骤 */
+.steps{counter-reset:st;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{
+  counter-increment:st;position:relative;padding:12px 14px 12px 48px;
+  background:#fbfcff;border:1px solid var(--line-soft);border-radius:var(--radius-sm);font-size:14px;color:var(--ink-soft);
+}
+.steps li::before{
+  content:counter(st,decimal-leading-zero);position:absolute;left:13px;top:11px;
+  width:24px;height:24px;border-radius:7px;background:var(--brand);color:#fff;
+  font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.steps b{color:var(--ink)}
+
+/* FAQ */
+.faq details{
+  border:1px solid var(--line-soft);border-radius:var(--radius-sm);margin-bottom:9px;
+  background:#fcfdff;overflow:hidden;
+}
+.faq details[open]{border-color:#c6d3e6;background:#fff}
+.faq summary{
+  cursor:pointer;padding:11px 15px;font-size:14.5px;font-weight:600;color:var(--brand);
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--accent);font-size:16px;font-weight:700;flex:0 0 auto}
+.faq details[open] summary::after{content:"－"}
+.faq .faq-body{padding:0 15px 13px;font-size:13.8px;color:var(--ink-soft)}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:11px}
+.comment{
+  border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:11px 13px;
+  background:#fcfdff;font-size:13.3px;color:var(--ink-soft);
+}
+.comment-top{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.avatar{
+  width:24px;height:24px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;
+  font-size:11.5px;font-weight:700;color:#fff;background:var(--brand-2);
+}
+.avatar.t2{background:var(--teal)}
+.avatar.t3{background:var(--accent);color:#33230a}
+.comment-top b{font-size:13px;color:var(--ink)}
+.comment-top time{margin-left:auto;font-size:11.5px;color:var(--muted)}
+
+/* 资讯 */
+.news-list{list-style:none;padding:0;margin:0}
+.news-list li{padding:11px 0;border-bottom:1px dashed var(--line-soft)}
+.news-list li:last-child{border-bottom:none}
+.news-title{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.news-title b{font-size:14.5px;color:var(--ink)}
+.news-title time{font-size:12px;color:var(--muted);flex:0 0 auto}
+.news-list p{margin:3px 0 0;font-size:13.2px;color:var(--ink-soft)}
+
+/* 相关推荐 标签索引 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:8px}
+.rec-tags a{
+  font-size:13px;padding:5px 13px;border-radius:20px;border:1px solid var(--line);
+  background:#fbfcfe;color:var(--ink-soft);transition:.15s;
+}
+.rec-tags a:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 16px 30px}
+.timeline li::before{
+  content:"";position:absolute;left:2px;top:5px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:3px solid var(--accent);
+}
+.timeline li:last-child{padding-bottom:0}
+.timeline b{display:block;font-size:14px;color:var(--brand)}
+.timeline span{font-size:13px;color:var(--ink-soft)}
+
+/* 右栏 */
+.col-right{position:sticky;top:var(--stick);align-self:start}
+.toc{list-style:none;padding:0;margin:0;font-size:13px}
+.toc li{margin:0}
+.toc a{display:block;padding:5px 8px;border-radius:6px;color:var(--ink-soft);border-left:2px solid transparent}
+.toc a:hover{background:#f5f8fd;color:var(--brand);border-left-color:var(--accent)}
+.hot-list{list-style:none;padding:0;margin:0;counter-reset:hot}
+.hot-list li{counter-increment:hot;display:flex;gap:9px;padding:6px 0;font-size:13px;color:var(--ink-soft);align-items:flex-start}
+.hot-list li::before{
+  content:counter(hot);flex:0 0 18px;height:18px;border-radius:5px;background:#eef2f9;
+  color:#4a5a72;font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center;
+  margin-top:2px;
+}
+.hot-list li:nth-child(-n+3)::before{background:var(--accent);color:#33230a}
+.hot-list a:hover{color:var(--brand);text-decoration:underline}
+.mini-links{list-style:none;padding:0;margin:0;font-size:13px}
+.mini-links li{padding:5px 0;border-bottom:1px dashed var(--line-soft)}
+.mini-links li:last-child{border-bottom:none}
+.mini-links a{color:var(--ink-soft);display:flex;gap:6px;align-items:baseline}
+.mini-links a::before{content:"›";color:var(--accent);font-weight:700}
+.mini-links a:hover{color:var(--brand)}
+
+/* 页尾 */
+.site-footer{
+  background:linear-gradient(180deg,#1b2a4a,#16202f);color:#c3cfdf;margin-top:10px;
+  border-top:4px solid var(--accent);
+}
+.footer-inner{max-width:1360px;margin:0 auto;padding:34px 20px 20px}
+.footer-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2fr);gap:30px;margin-bottom:24px}
+.footer-brand b{font-size:18px;color:#fff;display:block;margin-bottom:8px}
+.footer-brand p{font-size:13px;color:#9fb0c9;max-width:340px}
+.footer-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px}
+.fg h4{font-size:13px;color:#f2c46a;margin-bottom:8px;letter-spacing:.5px}
+.fg ul{list-style:none;padding:0;margin:0;font-size:13px}
+.fg li{margin:4px 0}
+.fg a{color:#b7c4d8}
+.fg a:hover{color:#fff;text-decoration:underline}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);padding-top:14px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#8fa0b8;
+}
+
+/* 筛选隐藏 */
+.is-hidden{display:none !important}
+
+/* 平板 */
+@media (max-width:1080px){
+  :root{--stick:104px}
+  .layout{grid-template-columns:minmax(0,1fr) 232px;gap:22px}
+  .col-left{display:none}
+  .header-nav{order:3;flex-basis:100%}
+  .header-inner{flex-wrap:wrap;gap:12px}
+  .header-search{flex:1 1 180px}
+}
+/* 手机 */
+@media (max-width:760px){
+  :root{--stick:96px}
+  .notice-text{white-space:normal;font-size:12.5px}
+  .notice-inner{padding:7px 14px}
+  .header-inner{padding:10px 14px;gap:10px}
+  .brand-text{font-size:17px}
+  .header-nav{
+    order:3;flex-basis:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  }
+  .header-nav::-webkit-scrollbar{display:none}
+  .header-nav a{flex:0 0 auto;background:#f3f6fb}
+  .hero-inner{grid-template-columns:1fr;padding:30px 16px 28px;gap:22px}
+  .hero h1{font-size:27px}
+  .hero-lead{font-size:14.5px}
+  .layout{grid-template-columns:minmax(0,1fr);padding:18px 14px 40px;gap:18px}
+  .col-right{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;align-items:start}
+  .col-right .side-panel{margin-bottom:0}
+  .block{padding:18px 16px 20px}
+  .block h2{font-size:18px}
+  .hero-visual{padding:13px}
+  .footer-top{grid-template-columns:1fr}
+  .footer-inner{padding:26px 14px 18px}
+}
+@media (max-width:400px){
+  .hero h1{font-size:24px}
+  .card-grid{grid-template-columns:1fr}
+  .update-list{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="notice-bar" id="notice">
+  <div class="notice-inner">
+    <span class="notice-tag">更新</span>
+    <span class="notice-text">本周新增「短篇挑战」「视觉命题」两档赛题方向，参赛条件与提交要点已同步整理</span>
+    <a class="notice-link" href="/#sec-update">查看更新</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/#top" aria-label="yandex每日大赛入口 首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1b2a4a"/>
+        <path d="M18 44 L32 16 L46 44 Z" fill="none" stroke="#e0a02c" stroke-width="4" stroke-linejoin="round"/>
+        <circle cx="32" cy="36" r="4.5" fill="#e0a02c"/>
+        <path d="M26 50 h12" stroke="#1f7a6c" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">yandex每日大赛入口</span>
+    </a>
+    <nav class="header-nav" aria-label="频道导航">
+      <a href="/#sec-intro">大赛简介</a>
+      <a href="/#sec-hot">热门赛题</a>
+      <a href="/#sec-update">最新更新</a>
+      <a href="/#sec-cat">分类入口</a>
+      <a href="/#sec-deep">深度解析</a>
+      <a href="/#sec-faq">常见问答</a>
+      <a href="/#sec-rec">相关推荐</a>
+    </nav>
+    <div class="header-search">
+      <input type="search" id="siteSearch" placeholder="查找赛题、玩法或标签…" aria-label="站内内容查找">
+      <div class="search-msg" id="searchMsg" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</header>
+
+<!-- 主题首屏 -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-eyebrow">每日命题 · 连续挑战 · 作品可见</span>
+      <h1>yandex每日大赛入口</h1>
+      <p class="hero-lead">围绕每日命题与限时创作组织的赛事入口页，梳理赛题方向、参赛条件、作品提交要点与日程节奏，帮助想参赛的人在开赛前把规则和玩法看清楚。</p>
+      <ul class="hero-points">
+        <li>每日一题，滚动开赛</li>
+        <li>短篇挑战 · 视觉命题</li>
+        <li>参赛门槛与提交格式</li>
+        <li>同类赛事横向对比</li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#sec-hot">浏览热门赛题</a>
+        <a class="btn btn-ghost" href="/#sec-faq">参赛条件答疑</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="visual-head">
+        <span>赛程节奏示意</span>
+        <span class="visual-dot"><i></i><i></i><i></i></span>
+      </div>
+      <div class="slot-row">
+        <span class="slot done">一</span>
+        <span class="slot done">二</span>
+        <span class="slot on">三</span>
+        <span class="slot">四</span>
+        <span class="slot">五</span>
+        <span class="slot">六</span>
+        <span class="slot">日</span>
+      </div>
+      <div class="slot-row">
+        <span class="slot">短篇</span>
+        <span class="slot on">视觉</span>
+        <span class="slot">叙事</span>
+        <span class="slot done">节奏</span>
+        <span class="slot">对白</span>
+        <span class="slot">剪辑</span>
+        <span class="slot">合稿</span>
+      </div>
+      <div class="visual-foot">
+        <span>连续参与天数 <b>12</b></span>
+        <span>当前命题 <b>进行中</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 三栏主内容区 -->
+<div class="layout" id="main">
+
+  <!-- 左栏 -->
+  <aside class="col-left" aria-label="频道与筛选">
+    <div class="side-panel">
+      <div class="side-title">频道索引</div>
+      <ul class="channel-list">
+        <li><a href="/#sec-intro">大赛简介</a></li>
+        <li><a href="/#sec-hot">热门赛题</a></li>
+        <li><a href="/#sec-update">最新更新</a></li>
+        <li><a href="/#sec-cat">分类入口</a></li>
+        <li><a href="/#sec-deep">深度解析</a></li>
+        <li><a href="/#sec-guide">体验指南</a></li>
+        <li><a href="/#sec-faq">常见问答</a></li>
+        <li><a href="/#sec-comment">参与者评论</a></li>
+        <li><a href="/#sec-news">相关资讯</a></li>
+        <li><a href="/#sec-rec">相关推荐</a></li>
+      </ul>
+    </div>
+    <div class="side-panel">
+      <div class="side-title">赛题筛选</div>
+      <div class="filter-chips" id="filterChips" role="group" aria-label="按赛题类型筛选">
+        <button class="chip active" data-filter="all" type="button">全部</button>
+        <button class="chip" data-filter="短篇" type="button">短篇挑战</button>
+        <button class="chip" data-filter="视觉" type="button">视觉命题</button>
+        <button class="chip" data-filter="叙事" type="button">叙事结构</button>
+        <button class="chip" data-filter="玩法" type="button">玩法说明</button>
+      </div>
+    </div>
+    <div class="side-panel">
+      <div class="side-title">参赛关键词</div>
+      <div class="filter-chips">
+        <a class="chip" href="/#sec-faq">参赛条件</a>
+        <a class="chip" href="/#sec-deep">提交要点</a>
+        <a class="chip" href="/#sec-deep">赛程节奏</a>
+        <a class="chip" href="/#sec-rec">赛事对比</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 中栏 -->
+  <main class="col-main">
+
+    <!-- 1. 内容简介 -->
+    <section class="block prose" id="sec-intro">
+      <div class="block-head">
+        <h2>大赛简介：每日命题的创作挑战怎么理解</h2>
+        <span class="block-sub">阅读约 4 分钟</span>
+      </div>
+      <p><strong>yandex每日大赛入口</strong>是围绕每日命题与限时创作组织的赛事入口方向，核心在于把“每天一题、按题创作、按期提交”的节奏讲清楚。它更接近一种连续挑战型的创作赛事：命题每天更新，参赛者需要在限定时间内完成一件可被评估的作品，类型覆盖短篇文字、视觉表达、叙事结构等多个方向。</p>
+      <p>与一次性投稿的创作比赛不同，连续挑战更看重参与节奏与完成度。很多人第一次接触时会先问三个问题：每天大概花多少时间、命题能不能提前看到、作品提交后有没有反馈。这些问题的答案，决定了它更适合哪一类创作者参与。</p>
+      <h3>它解决的是什么需求</h3>
+      <p>第一类需求是练手。日常写作或设计容易陷入选题困难，每日命题相当于外部给了一个起点，省掉“今天写什么”的犹豫。第二类是曝光与反馈，连续参与会让作品形成序列，更容易被同好看到并讨论。第三类是比较与选择，很多人在多个创作赛事之间犹豫，需要看清门槛、周期和评判维度再决定投入。</p>
+      <h3>适合谁，不适合谁</h3>
+      <ul>
+        <li>适合：能保证每天或隔天有一段固定创作时间的人；喜欢被命题推着走、不擅长自己定选题的人；想通过连续输出积累作品序列的人。</li>
+        <li>不太适合：追求长周期打磨、单件作品反复修改的人；时间高度碎片化、难以在限定窗口内完成提交的人。</li>
+      </ul>
+      <p>理解这一点之后，再看赛题分类、日程节奏和提交格式，判断会更准确。连续挑战的价值不只在单件作品，更在于参与过程中形成的稳定输出习惯。</p>
+    </section>
+
+    <!-- 2. 热门内容推荐 -->
+    <section class="block" id="sec-hot">
+      <div class="block-head">
+        <h2>热门赛题推荐：近期讨论度较高的命题方向</h2>
+        <span class="block-sub">共 8 个赛题方向</span>
+      </div>
+      <div class="card-grid" id="hotCards">
+        <article class="card" data-type="短篇">
+          <div class="card-top"><h3>三百字微短篇挑战</h3><span class="type-tag">短篇</span></div>
+          <p class="card-desc">用三百字以内讲完一个有转折的小故事，重点看开头抓力与结尾收束，适合练短篇节奏。</p>
+          <div class="tag-row"><span class="tag">微短篇</span><span class="tag">限字创作</span><span class="tag">转折结尾</span></div>
+          <div class="card-meta"><span>参与热度 96</span><span>更新中</span></div>
+        </article>
+        <article class="card" data-type="视觉">
+          <div class="card-top"><h3>单色视觉命题挑战</h3><span class="type-tag">视觉</span></div>
+          <p class="card-desc">限定单色系完成一张画面，考察构图与层次，配色被压缩后更考验形状关系。</p>
+          <div class="tag-row"><span class="tag">单色构图</span><span class="tag">画面层次</span><span class="tag">视觉命题</span></div>
+          <div class="card-meta"><span>参与热度 91</span><span>更新中</span></div>
+        </article>
+        <article class="card" data-type="叙事">
+          <div class="card-top"><h3>三段式叙事结构练习</h3><span class="type-tag">叙事</span></div>
+          <p class="card-desc">按起、转、合三段组织内容，要求每段功能明确，适合梳理故事骨架。</p>
+          <div class="tag-row"><span class="tag">三段结构</span><span class="tag">故事骨架</span><span class="tag">叙事节奏</span></div>
+          <div class="card-meta"><span>参与热度 88</span><span>更新中</span></div>
+        </article>
+        <article class="card" data-type="玩法">
+          <div class="card-top"><h3>接龙式连续命题</h3><span class="type-tag">玩法</span></div>
+          <p class="card-desc">后一天命题承接前一天结尾，考察连贯性与临场调整，适合喜欢即兴的人。</p>
+          <div class="tag-row"><span class="tag">连续命题</span><span class="tag">即兴创作</span><span class="tag">衔接练习</span></div>
+          <div class="card-meta"><span>参与热度 85</span><span>更新中</span></div>
+        </article>
+        <article class="card" data-type="短篇">
+          <div class="card-top"><h3>一句话扩写挑战</h3><span class="type-tag">短篇</span></div>
+          <p class="card-desc">给定一句话作为起点扩写成完整片段，重点看信息增补是否自然。</p>
+          <div class="tag-row"><span class="tag">扩写练习</span><span class="tag">信息增补</span><span class="tag">片段写作</span></div>
+          <div class="card-meta"><span>参与热度 83</span><span>更新中</span></div>
+        </article>
+        <article class="card" data-type="视觉">
+          <div class="card-top"><h3>限定元素海报命题</h3><span class="type-tag">视觉</span></div>
+          <p class="card-desc">只允许使用三种图形元素完成一张海报，考察取舍与排版控制力。</p>
+          <div class="tag-row"><span class="tag">海报排版</span><span class="tag">元素限定</span><span class="tag">版式控制</span></div>
+          <div class="card-meta"><span>参与热度 80</span><span>更新中</span></div>
+        </article>
+        <article class="card" data-type="叙事">
+          <div class="card-top"><h3>同一场景多视角改写</h3><span class="type-tag">叙事</span></div>
+          <p class="card-desc">同一件事换两个人物视角各写一遍，观察信息差如何改变读者判断。</p>
+          <div class="tag-row"><span class="tag">多视角</span><span class="tag">信息差</span><span class="tag">人物改写</span></div>
+          <div class="card-meta"><span>参与热度 78</span><span>更新中</span></div>
+        </article>
+        <article class="card" data-type="玩法">
+          <div class="card-top"><h3>倒计时限时命题</h3><span class="type-tag">玩法</span></div>
+          <p class="card-desc">两小时内完成并提交，重点不在完美而在完成，适合练快速决策。</p>
+          <div class="tag-row"><span class="tag">限时创作</span><span class="tag">快速决策</span><span class="tag">完成优先</span></div>
+          <div class="card-meta"><span>参与热度 76</span><span>更新中</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. 最新更新 -->
+    <section class="block" id="sec-update">
+      <div class="block-head">
+        <h2>最新更新：近期命题与规则变动</h2>
+        <span class="block-sub">示例节奏展示</span>
+      </div>
+      <ul class="update-list">
+        <li><span class="up-time">本周</span><div class="up-body"><b>新增视觉命题方向</b><span>单色构图与限定元素两类赛题开始轮换出现。</span></div></li>
+        <li><span class="up-time">本周</span><div class="up-body"><b>提交格式说明补充</b><span>明确字数、画幅与文件大小上限，减少无效提交。</span></div></li>
+        <li><span class="up-time">近三天</span><div class="up-body"><b>短篇挑战字数调整</b><span>微短篇上限由两百字放宽至三百字。</span></div></li>
+        <li><span class="up-time">近三天</span><div class="up-body"><b>连续参与记录展示</b><span>参与天数与完成率按周汇总展示。</span></div></li>
+        <li><span class="up-time">近一周</span><div class="up-body"><b>叙事类命题增加示例</b><span>三段式结构提供参考拆分方式。</span></div></li>
+        <li><span class="up-time">近一周</span><div class="up-body"><b>接龙命题衔接规则更新</b><span>允许前一天结尾留白，次日自行承接。</span></div></li>
+        <li><span class="up-time">近一周</span><div class="up-body"><b>限时赛题时长调整</b><span>倒计时命题由三小时缩短为两小时。</span></div></li>
+        <li><span class="up-time">近两周</span><div class="up-body"><b>同类赛事对比页补充</b><span>增加周期、门槛与反馈方式三项对照维度。</span></div></li>
+        <li><span class="up-time">近两周</span><div class="up-body"><b>一句话扩写命题上线</b><span>以给定句子为起点的扩写方向开始出现。</span></div></li>
+        <li><span class="up-time">近两周</span><div class="up-body"><b>反馈展示方式调整</b><span>同好点评与命题解读分区展示，便于回看。</span></div></li>
+      </ul>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section class="block" id="sec-cat">
+      <div class="block-head">
+        <h2>分类入口：按创作方向找赛题</h2>
+        <span class="block-sub">8 个方向</span>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-item" href="/#sec-hot"><b>微短篇挑战</b><span>限字叙事 · 短篇节奏</span></a>
+        <a class="cat-item" href="/#sec-hot"><b>视觉命题</b><span>构图 · 配色 · 版式</span></a>
+        <a class="cat-item" href="/#sec-hot"><b>叙事结构练习</b><span>三段式 · 多视角</span></a>
+        <a class="cat-item" href="/#sec-hot"><b>限时创作玩法</b><span>倒计时 · 快速完成</span></a>
+        <a class="cat-item" href="/#sec-hot"><b>扩写与改写</b><span>一句话起点 · 信息增补</span></a>
+        <a class="cat-item" href="/#sec-hot"><b>接龙连续命题</b><span>前后衔接 · 即兴</span></a>
+        <a class="cat-item" href="/#sec-deep"><b>参赛条件说明</b><span>门槛 · 时间 · 工具</span></a>
+        <a class="cat-item" href="/#sec-deep"><b>作品提交要点</b><span>格式 · 命名 · 截止</span></a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析 -->
+    <section class="block prose deep" id="sec-deep">
+      <div class="block-head">
+        <h2>深度解析：连续命题赛事的参与逻辑</h2>
+        <span class="block-sub">阅读约 6 分钟</span>
+      </div>
+      <p>连续命题型挑战和传统征稿最大的区别，是把“选题”这一步外部化。命题每天更新，参赛者拿到的是一张有明确边界的任务卡：写多长、用什么形式、什么时间前交。边界越清楚，越容易判断自己能不能完成。理解这一点，是判断是否适合参与的关键。</p>
+
+      <h3>命题节奏如何影响完成率</h3>
+      <p>每日命题的难点不在单题难度，而在连续输出带来的疲劳。多数人第一周状态最好，第二周开始出现“今天跳过”的念头。实际参与中，完成率高的做法通常不是每篇都追求最佳，而是设定一个可交付的最低完成标准。</p>
+      <ul>
+        <li>先定最低完成线：比如微短篇先写到一百五十字，再看是否补齐。</li>
+        <li>把命题拆成两步：先出结构，再填内容，避免边写边改。</li>
+        <li>固定时段创作：同一时间段处理命题，减少决策消耗。</li>
+      </ul>
+      <div class="callout">连续参与的关键不是每天都写得好，而是让“开始写”这件事变成固定动作。完成率比单篇质量更能决定参与体验。</div>
+
+      <h3>参赛条件里最容易被忽略的三项</h3>
+      <p>很多人看到 yandex每日大赛入口 这类方向，第一反应是找提交按钮，实际上更该先确认三件事：时间窗口、作品格式、是否允许重复提交。时间窗口决定你能不能安排出整块时间；格式决定你需不需要提前准备工具；重复提交规则决定你是先交一版占位，还是等到满意再交。</p>
+      <ul>
+        <li><strong>时间窗口：</strong>部分命题只在当天有效，跨天提交视为无效。</li>
+        <li><strong>作品格式：</strong>文字类通常限定字数区间，视觉类限定画幅与文件大小。</li>
+        <li><strong>重复提交：</strong>有的允许覆盖，有的只取首次，规则不同准备策略也不同。</li>
+      </ul>
+
+      <h3>作品提交要点：从草稿到可交付</h3>
+      <p>提交环节的常见问题不是作品差，而是不符合要求。赛题通常会给出一段格式说明，读起来枯燥，但恰恰是减少返工的关键。建议在动手前先把要求抄成三条检查项，写完逐条对照。</p>
+      <ol>
+        <li>字数或画幅是否落在规定区间内，超出即视为不合规。</li>
+        <li>文件命名是否包含命题编号与参与标识，便于归档。</li>
+        <li>提交后是否收到确认反馈，没有反馈要及时重试。</li>
+      </ol>
+      <p>作品提交后不必立刻进入下一题，花两分钟回看自己这版的结构，比连着写三篇更有价值。连续挑战的收益来自复盘，而不是单纯堆数量。</p>
+
+      <h3>与同类创作赛事怎么比较</h3>
+      <p>面对多个创作赛事，可以从四个维度横向对照：周期长度、命题自由度、反馈方式、参与门槛。长周期赛事适合打磨单件作品，每日命题适合练稳定输出；自由度高的赛事对选题能力要求更高，命题明确的赛事更省决策成本。</p>
+      <ul>
+        <li>周期：每日 vs 每周 vs 整月，决定投入节奏。</li>
+        <li>自由度：全开放命题与限定命题，对应不同创作习惯。</li>
+        <li>反馈：同好点评、命题解读、仅结果公示，影响改进速度。</li>
+        <li>门槛：是否需要报名、是否需要特定工具或账号。</li>
+      </ul>
+      <p>如果目标是积累作品序列并养成习惯，连续命题型更合适；如果目标是冲一件代表作，长周期征稿更值得投入。两者并不冲突，可以先用每日命题练手，再把满意的方向扩展成长篇。</p>
+
+      <h3>参与前值得先做的一次自测</h3>
+      <p>在决定长期参与前，可以先做一次小规模自测：连续三天按命题完成最低标准作品，记录每天实际耗时与卡点。三天后回看，如果卡点集中在选题而不是执行，说明命题型节奏适合你；如果卡点集中在时间，则需要先调整日程再谈参与。</p>
+    </section>
+
+    <!-- 6. 体验指南 -->
+    <section class="block" id="sec-guide">
+      <div class="block-head">
+        <h2>体验指南：从浏览到完成一次提交</h2>
+        <span class="block-sub">5 个步骤</span>
+      </div>
+      <ol class="steps">
+        <li><b>先看命题类型。</b>在热门赛题区按短篇、视觉、叙事、玩法四类浏览，挑一个与自己日常创作最接近的方向，降低第一次参与的心理门槛。</li>
+        <li><b>确认时间与格式。</b>进入具体命题后先读格式说明，把字数、画幅、文件大小、截止时间记成三条检查项，再开始动手。</li>
+        <li><b>设定最低完成线。</b>给自己一个可交付的下限，比如先写出完整结构，再决定是否打磨细节，避免卡在开头。</li>
+        <li><b>提交并留档。</b>提交后保存一份本地副本与命题编号，方便后续回看和对比自己的进步轨迹。</li>
+        <li><b>扩展阅读与对比。</b>通过相关推荐标签进入参赛条件、提交要点和赛事对比方向，把单次参与放进更长的时间线里看。</li>
+      </ol>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="block faq" id="sec-faq">
+      <div class="block-head">
+        <h2>常见问答：参赛条件与节奏疑问</h2>
+        <span class="block-sub">6 个高频问题</span>
+      </div>
+      <details>
+        <summary>每日大赛类型的创作挑战适合什么人参加？</summary>
+        <div class="faq-body">适合能保证每天或隔天有一段固定创作时间、且不擅长自己定选题的人。如果平时更习惯长时间打磨单件作品，可能会觉得节奏偏快，可以先按隔天参与的方式试一段时间。</div>
+      </details>
+      <details>
+        <summary>每日命题一般多久更新一次，错过当天还能补吗？</summary>
+        <div class="faq-body">命题通常按天更新，是否允许补交取决于当期规则。多数连续挑战把当天作为有效窗口，跨天提交可能不计入连续记录。参与前建议先确认补交条款，再安排时间。</div>
+      </details>
+      <details>
+        <summary>参加这类赛事需要准备哪些工具？</summary>
+        <div class="faq-body">文字类命题一般只需写作工具与稳定的提交环境；视觉类命题需要能导出规定画幅与文件大小的工具。真正需要提前确认的是导出格式和文件上限，而不是工具本身是否高级。</div>
+      </details>
+      <details>
+        <summary>作品提交后没有反馈，是不是没提交成功？</summary>
+        <div class="faq-body">不一定。部分命题只做结果汇总，不逐条回复。稳妥做法是提交后保留截图或本地副本，若长时间没有任何确认信息，再按当期说明的渠道核对。</div>
+      </details>
+      <details>
+        <summary>连续参与和单次参赛相比，哪个更值得投入？</summary>
+        <div class="faq-body">看目标。想养成输出习惯、积累作品序列，连续参与更有价值；想集中精力做一件代表作，单次长周期赛事更合适。两者可以结合，先用连续命题练手，再挑满意方向扩展。</div>
+      </details>
+      <details>
+        <summary>和同类创作赛事比，每日命题型挑战的优势在哪？</summary>
+        <div class="faq-body">优势在决策成本低和反馈周期短。命题已经给出方向，省掉选题环节；每天一次提交让改进反馈来得更快。代价是单件作品的打磨深度通常不如长周期征稿。</div>
+      </details>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section class="block" id="sec-comment">
+      <div class="block-head">
+        <h2>参与者评论：真实语气下的体验片段</h2>
+        <span class="block-sub">14 条</span>
+      </div>
+      <div class="comment-grid">
+        <div class="comment"><div class="comment-top"><span class="avatar">林</span><b>林间慢写</b><time>3 天前</time></div>微短篇三百字这个上限挺友好，写完还能留时间改一遍。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar t2">周</span><b>周末画板</b><time>3 天前</time></div>单色命题比想象中难，颜色一少，构图问题全暴露出来了。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar t3">陈</span><b>陈小满</b><time>4 天前</time></div>连续参与第十二天，中间断过一次，重来之后反而更清楚自己要什么。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar">阿</span><b>阿舟的笔记</b><time>4 天前</time></div>格式说明真的要读，我第一次提交就因为字数超了被退回。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar t2">苏</span><b>苏木木</b><time>5 天前</time></div>三段式结构练习对写长文帮助挺大，先搭骨架再填内容顺很多。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar t3">何</span><b>何处安放</b><time>5 天前</time></div>限时两小时那档有点压力，但确实治好了我的拖延。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar">郑</span><b>郑一页</b><time>6 天前</time></div>感觉命题难度不太均匀，有的很简单，有的要卡很久。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar t2">许</span><b>许知远山</b><time>6 天前</time></div>接龙命题挺好玩，前一天结尾留白，第二天自己接上，像在对话。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar t3">白</span><b>白露为霜</b><time>1 周前</time></div>反馈方式如果能再具体一点就好了，现在主要靠自己回看。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar">顾</span><b>顾言午</b><time>1 周前</time></div>一句话扩写很适合练信息增补，写完对照原句能看出自己加多了什么。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar t2">沈</span><b>沈青禾</b><time>1 周前</time></div>海报命题限定三种元素，做减法比做加法难，但成品更干净。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar t3">叶</span><b>叶知秋</b><time>1 周前</time></div>多视角改写让我意识到信息差比情节更能抓住读者。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar">程</span><b>程也</b><time>1 周前</time></div>整体节奏偏快，适合练手，不太适合想慢慢打磨的人。</div>
+        <div class="comment"><div class="comment-top"><span class="avatar t2">罗</span><b>罗小北</b><time>1 周前</time></div>把命题编号记下来之后，回看自己前两周的作品，进步挺明显。</div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section class="block" id="sec-news">
+      <div class="block-head">
+        <h2>相关资讯：赛事节奏与创作趋势</h2>
+        <span class="block-sub">6 条</span>
+      </div>
+      <ul class="news-list">
+        <li>
+          <div class="news-title"><b>连续命题型创作挑战为何在短内容领域流行</b><time>2025-03-18</time></div>
+          <p>相比长周期征稿，每日命题把决策成本压到最低，参与者更容易迈出第一步，也更适合碎片时间安排。</p>
+        </li>
+        <li>
+          <div class="news-title"><b>限字创作的回潮：三百字为什么成了常见上限</b><time>2025-03-14</time></div>
+          <p>三百字既能容纳一个完整转折，又不至于让参与者望而却步，成为微短篇命题里出现频率较高的区间。</p>
+        </li>
+        <li>
+          <div class="news-title"><b>视觉命题中的元素限定：做减法比做加法更难</b><time>2025-03-09</time></div>
+          <p>限定图形元素和单色系之后，版式控制力成为区分作品的主要维度，构图问题也更难被装饰掩盖。</p>
+        </li>
+        <li>
+          <div class="news-title"><b>多视角改写练习在叙事训练中的应用</b><time>2025-03-04</time></div>
+          <p>同一事件换人物视角重写，能让写作者直观感受到信息差对读者判断的影响，是叙事结构训练的常见方法。</p>
+        </li>
+        <li>
+          <div class="news-title"><b>参赛条件说明为何值得单独整理成一页</b><time>2025-02-26</time></div>
+          <p>时间窗口、作品格式、重复提交规则三项最容易出错，集中说明能显著减少无效提交和返工。</p>
+        </li>
+        <li>
+          <div class="news-title"><b>创作赛事对比：周期、自由度与反馈方式</b><time>2025-02-20</time></div>
+          <p>选择赛事时，周期长度与反馈方式往往比奖金更影响实际体验，先明确目标再对照维度会更高效。</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section class="block" id="sec-rec">
+      <div class="block-head">
+        <h2>相关推荐：可继续深入的方向</h2>
+        <span class="block-sub">标签索引</span>
+      </div>
+      <div class="rec-tags">
+        <a href="/#sec-deep">微短篇参赛条件</a>
+        <a href="/#sec-deep">作品提交格式检查</a>
+        <a href="/#sec-deep">视觉命题构图要点</a>
+        <a href="/#sec-deep">三段式叙事拆分</a>
+        <a href="/#sec-deep">限时创作时间安排</a>
+        <a href="/#sec-deep">接龙命题衔接技巧</a>
+        <a href="/#sec-deep">多视角改写练习</a>
+        <a href="/#sec-deep">创作赛事横向对比</a>
+      </div>
+    </section>
+
+    <!-- 11. 时间线 -->
+    <section class="block" id="sec-timeline">
+      <div class="block-head">
+        <h2>赛程时间线：一次连续参与的大致节奏</h2>
+        <span class="block-sub">示例节奏</span>
+      </div>
+      <ul class="timeline">
+        <li><b>第 1—3 天：熟悉命题</b><span>先按最低完成线参与，重点是把提交流程走通，确认时间窗口与格式要求。</span></li>
+        <li><b>第 4—7 天：稳定输出</b><span>固定创作时段，命题类型开始轮换，尝试在短篇与叙事之间切换。</span></li>
+        <li><b>第 8—14 天：结构复盘</b><span>回看前两周作品，找出重复出现的问题，比如开头拖沓或结尾收不住。</span></li>
+        <li><b>第 15 天以后：方向选择</b><span>挑出自己最顺手的命题类型，考虑把这方向扩展成更完整的长篇或系列作品。</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- 右栏 -->
+  <aside class="col-right" aria-label="辅助阅读">
+    <div class="side-panel">
+      <div class="side-title">本页目录</div>
+      <ul class="toc">
+        <li><a href="/#sec-intro">大赛简介</a></li>
+        <li><a href="/#sec-hot">热门赛题推荐</a></li>
+        <li><a href="/#sec-update">最新更新</a></li>
+        <li><a href="/#sec-cat">分类入口</a></li>
+        <li><a href="/#sec-deep">深度解析</a></li>
+        <li><a href="/#sec-guide">体验指南</a></li>
+        <li><a href="/#sec-faq">常见问答</a></li>
+        <li><a href="/#sec-comment">参与者评论</a></li>
+        <li><a href="/#sec-news">相关资讯</a></li>
+        <li><a href="/#sec-rec">相关推荐</a></li>
+        <li><a href="/#sec-timeline">赛程时间线</a></li>
+      </ul>
+    </div>
+    <div class="side-panel">
+      <div class="side-title">热门条目</div>
+      <ul class="hot-list">
+        <li><a href="/#sec-hot">三百字微短篇挑战</a></li>
+        <li><a href="/#sec-hot">单色视觉命题挑战</a></li>
+        <li><a href="/#sec-hot">三段式叙事结构练习</a></li>
+        <li><a href="/#sec-hot">接龙式连续命题</a></li>
+        <li><a href="/#sec-hot">一句话扩写挑战</a></li>
+        <li><a href="/#sec-hot">限定元素海报命题</a></li>
+      </ul>
+    </div>
+    <div class="side-panel">
+      <div class="side-title">延伸阅读</div>
+      <ul class="mini-links">
+        <li><a href="/#sec-deep">参赛条件三项必查</a></li>
+        <li><a href="/#sec-deep">作品提交格式要点</a></li>
+        <li><a href="/#sec-deep">连续参与完成率提升</a></li>
+        <li><a href="/#sec-guide">从浏览到一次提交</a></li>
+        <li><a href="/#sec-faq">错过当天能否补交</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <b>yandex每日大赛入口</b>
+        <p>围绕每日命题与限时创作整理的赛事入口方向页，聚焦赛题类型、参赛条件、提交要点与赛事对比，帮助参与者在开赛前把规则看清。</p>
+      </div>
+      <div class="footer-groups">
+        <div class="fg">
+          <h4>赛题方向</h4>
+          <ul>
+            <li><a href="/#sec-hot">微短篇挑战</a></li>
+            <li><a href="/#sec-hot">视觉命题</a></li>
+            <li><a href="/#sec-hot">叙事结构练习</a></li>
+            <li><a href="/#sec-hot">限时创作玩法</a></li>
+          </ul>
+        </div>
+        <div class="fg">
+          <h4>参与必读</h4>
+          <ul>
+            <li><a href="/#sec-deep">参赛条件说明</a></li>
+            <li><a href="/#sec-deep">作品提交要点</a></li>
+            <li><a href="/#sec-guide">体验指南</a></li>
+            <li><a href="/#sec-timeline">赛程时间线</a></li>
+          </ul>
+        </div>
+        <div class="fg">
+          <h4>延伸内容</h4>
+          <ul>
+            <li><a href="/#sec-news">相关资讯</a></li>
+            <li><a href="/#sec-rec">相关推荐</a></li>
+            <li><a href="/#sec-comment">参与者评论</a></li>
+            <li><a href="/#sec-faq">常见问答</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>页面内容为示例数据，仅用于展示页面结构。</span>
+      <span>© 2025 yandex每日大赛入口 · 主题内容整理</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 站内查找 ---------- */
+  var searchInput = document.getElementById('siteSearch');
+  var searchMsg = document.getElementById('searchMsg');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#hotCards .card'));
+  var blocks = Array.prototype.slice.call(document.querySelectorAll('.col-main > section'));
+
+  function clearHighlight(){
+    blocks.forEach(function(b){ b.classList.remove('is-hidden'); });
+    cards.forEach(function(c){ c.classList.remove('is-hidden'); });
+  }
+
+  function runSearch(){
+    var q = (searchInput.value || '').trim().toLowerCase();
+    if(!q){
+      clearHighlight();
+      searchMsg.classList.remove('show');
+      searchMsg.textContent = '';
+      return;
+    }
+    var hits = 0;
+    cards.forEach(function(card){
+      var text = card.textContent.toLowerCase();
+      var match = text.indexOf(q) !== -1;
+      card.classList.toggle('is-hidden', !match);
+      if(match) hits++;
+    });
+    /* 卡片区之外：按板块整体判断，没有命中的板块折叠 */
+    var hotSection = document.getElementById('sec-hot');
+    blocks.forEach(function(sec){
+      if(sec === hotSection) { return; }
+      var match = sec.textContent.toLowerCase().indexOf(q) !== -1;
+      sec.classList.toggle('is-hidden', !match);
+      if(match) hits++;
+    });
+    if(hits === 0){
+      clearHighlight();
+      searchMsg.classList.add('show');
+      searchMsg.textContent = '未找到与「' + searchInput.value.trim() + '」相关的内容，可尝试“短篇”“视觉”“参赛条件”等关键词。';
+    }else{
+      searchMsg.classList.add('show');
+      searchMsg.textContent = '找到 ' + hits + ' 处相关内容，已突出显示。';
+    }
+  }
+
+  if(searchInput){
+    searchInput.addEventListener('input', runSearch);
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ searchInput.value=''; runSearch(); searchInput.blur(); }
+    });
+  }
+
+  /* ---------- 赛题筛选 ---------- */
+  var chipWrap = document.getElementById('filterChips');
+  if(chipWrap){
+    chipWrap.addEventListener('click', function(e){
+      var btn = e.target.closest('button.chip');
+      if(!btn) return;
+      chipWrap.querySelectorAll('button.chip').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      cards.forEach(function(card){
+        var t = card.getAttribute('data-type') || '';
+        card.classList.toggle('is-hidden', f !== 'all' && t !== f);
+      });
+      if(searchMsg){
+        searchMsg.classList.remove('show');
+        searchMsg.textContent = '';
+      }
+      if(searchInput) searchInput.value = '';
+    });
+  }
+})();
+</script>
+</body>
+                                                    </html>
